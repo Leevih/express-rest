@@ -1,0 +1,27 @@
+{
+  "name": "receipts-backend",
+  "version": "1.0.0",
+  "description": "a backend for a mobile app",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leevih/express-rest.git"
+  },
+  "author": "Leevi Matias Honkonen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Leevih/express-rest/issues"
+  },
+  "homepage": "https://github.com/Leevih/express-rest#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.13",
+    "nodemon": "^2.0.1"
+  }
+}
