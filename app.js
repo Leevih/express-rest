@@ -8,9 +8,7 @@ require('dotenv/config');
 
 //MIDDLEWARE
 app.use(bodyParser.json());
-app.use(cors({
-    origin: 'https://codepen.io/pen'
-}));
+app.use(cors());
 
 //IMPORT ROUTES
 const postsRoute = require('./routes/posts');
