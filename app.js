@@ -23,11 +23,18 @@ app.use('/products', productsRoute);
 app.use('/testend', testRoute);
 
 //CONNECT TO MONGODB
-mongoose.connect(process.env.DB_CONNECTION, {  useUnifiedTopology: true , useNewUrlParser: true}, 
+/* mongoose.connect(process.env.DB_CONNECTION, {  useUnifiedTopology: true , useNewUrlParser: true}, 
 () => {
     console.log('connected to to mongo');
 });
 
+ */
+// TESTING MONGODB CONNECTION WITH A HARDCODED URI, TO SEE IF THAT'S THE PROBLEM WITH HEROKU
+mongoose.connect('mongodb+srv://admin:admin@cluster0-6a7dz.mongodb.net/test?retryWrites=true&w=majority', 
+{ useUnifiedTopology: true, useNewUrlParser: true },
+() => {
+    console.log('connected to mongo');
+});
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
