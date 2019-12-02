@@ -15,9 +15,7 @@ const postsRoute = require('./routes/posts');
 const receiptsRoute = require('./routes/receipts');
 const productsRoute = require('./routes/products');
 
-app.use('/', () => {
-    return 'this is the / page';
-})
+
 app.use('/posts', postsRoute);
 app.use('/receipts', receiptsRoute);
 app.use('/products', productsRoute)
@@ -29,7 +27,7 @@ mongoose.connect(process.env.DB_CONNECTION, {  useUnifiedTopology: true , useNew
 });
 
 
-const PORT = process.env.PORT || 8080
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`)
-})
+  console.log(`Server running on port ${PORT}`);
+});
