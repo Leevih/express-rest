@@ -15,6 +15,9 @@ const postsRoute = require('./routes/posts');
 const receiptsRoute = require('./routes/receipts');
 const productsRoute = require('./routes/products');
 
+app.use('/', () => {
+    return 'this is the / page';
+})
 app.use('/posts', postsRoute);
 app.use('/receipts', receiptsRoute);
 app.use('/products', productsRoute)
