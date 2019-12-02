@@ -14,11 +14,13 @@ app.use(cors());
 const postsRoute = require('./routes/posts');
 const receiptsRoute = require('./routes/receipts');
 const productsRoute = require('./routes/products');
+const testRoute = require('./routes/testend');
 
 
 app.use('/posts', postsRoute);
 app.use('/receipts', receiptsRoute);
-app.use('/products', productsRoute)
+app.use('/products', productsRoute);
+app.use('/testend', testRoute);
 
 //CONNECT TO MONGODB
 mongoose.connect(process.env.DB_CONNECTION, {  useUnifiedTopology: true , useNewUrlParser: true}, 
